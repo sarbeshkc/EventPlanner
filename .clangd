@@ -1,0 +1,6 @@
+
+CompileFlags:
+  Add:
+    - "-I/home/etoski/imgui"
+    - "-I/home/etoski/imgui/backends"
+    - "I/home/etoski/json/include"

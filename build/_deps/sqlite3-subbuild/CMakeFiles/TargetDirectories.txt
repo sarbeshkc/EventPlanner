@@ -1,0 +1,3 @@
+/home/etoski/Personal_Project/Demo/build/_deps/sqlite3-subbuild/CMakeFiles/sqlite3-populate.dir
+/home/etoski/Personal_Project/Demo/build/_deps/sqlite3-subbuild/CMakeFiles/edit_cache.dir
+/home/etoski/Personal_Project/Demo/build/_deps/sqlite3-subbuild/CMakeFiles/rebuild_cache.dir
