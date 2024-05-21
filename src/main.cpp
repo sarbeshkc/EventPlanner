@@ -1,4 +1,3 @@
-
 #include <GLFW/glfw3.h>
 #include <boost/asio.hpp>
 #include <imgui.h>
@@ -7,80 +6,73 @@
 #include <iostream>
 #include <sqlite3.h>
 
+void frame_buffer_size_callback(GLFWwindow *window, int height, int width) {
+  glViewport(0, 0, width, height);
+}
+
 int main() {
-  // Initialize GLFW
-  if (!glfwInit()) {
-    std::cout << "Failed to initialize GLFW" << std::endl;
-    return -1;
-  }
+  if (!glfwInit())
+    exit(EXIT_FAILURE);
 
-  // Create a window
-  GLFWwindow *window =
-      glfwCreateWindow(800, 600, "Campus Event Planner", nullptr, nullptr);
+  glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
+  glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
+  glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+
+  // Creating Glfw window
+  GLFWwindow *window = glfwCreateWindow(1280, 700, "Event planner", NULL, NULL);
   if (!window) {
-    std::cout << "Failed to create GLFW window" << std::endl;
     glfwTerminate();
-    return -1;
+    exit(EXIT_FAILURE);
   }
 
-  // Make the window's context current
   glfwMakeContextCurrent(window);
+  glfwSwapInterval(1);
+  glfwSetFramebufferSizeCallback(window, frame_buffer_size_callback);
 
-  // Initialize ImGui
+  // Setting up imgui CreateContext
   IMGUI_CHECKVERSION();
   ImGui::CreateContext();
+
+  ImGuiIO &io = ImGui::GetIO();
+
+  // Setting up platform and render binding
+
   ImGui_ImplGlfw_InitForOpenGL(window, true);
-  ImGui_ImplOpenGL3_Init("#version 130");
+  ImGui_ImplOpenGL3_Init("#version 330");
 
-  // SQLite test
-  sqlite3 *db;
-  int rc = sqlite3_open(":memory:", &db);
-  if (rc != SQLITE_OK) {
-    std::cout << "Failed to open SQLite database: " << sqlite3_errmsg(db)
-              << std::endl;
-    sqlite3_close(db);
-    return -1;
-  }
-  sqlite3_close(db);
+  // Setting up imgui window
+  ImGui::StyleColorsDark();
 
-  // Boost.ASIO test
-  boost::asio::io_context io_context;
-  boost::asio::steady_timer timer(io_context, boost::asio::chrono::seconds(1));
-  timer.wait();
-
-  // nlohmann/json test
-
-  // Main loop
   while (!glfwWindowShouldClose(window)) {
-    glfwPollEvents();
 
-    // Start a new ImGui frame
+    glfwPollEvents();
     ImGui_ImplOpenGL3_NewFrame();
     ImGui_ImplGlfw_NewFrame();
     ImGui::NewFrame();
 
-    // Create a simple ImGui window
-    ImGui::Begin("Campus Event Planner");
-    ImGui::Text("Hello, ImGui!");
-    ImGui::End();
-
-    // Render ImGui
-    ImGui::Render();
     int display_w, display_h;
     glfwGetFramebufferSize(window, &display_w, &display_h);
+    ImGui::SetNextWindowSize(
+        ImVec2(static_cast<float>(display_w), static_cast<float>(display_h)));
+
+    ImGui::Begin("EventPlanner", nullptr,
+                 ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoMove |
+                     ImGuiWindowFlags_NoTitleBar);
+
+    ImGui::Button("click");
+
+    ImGui::End();
+
+    ImGui::Render();
     glViewport(0, 0, display_w, display_h);
+    glClearColor(0.3f, 0.8f, 0.5f, 0.1f);
     glClear(GL_COLOR_BUFFER_BIT);
-    ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
-
     glfwSwapBuffers(window);
-  }
 
-  // Clean up ImGui and GLFW
+    ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
+  }
+  glfwDestroyWindow(window);
   ImGui_ImplOpenGL3_Shutdown();
   ImGui_ImplGlfw_Shutdown();
   ImGui::DestroyContext();
-  glfwDestroyWindow(window);
-  glfwTerminate();
-
-  return 0;
 }
