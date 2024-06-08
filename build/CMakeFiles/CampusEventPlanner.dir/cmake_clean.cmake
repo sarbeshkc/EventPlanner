@@ -15,6 +15,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/CampusEventPlanner.dir/extern/imgui/imgui_widgets.cpp.o.d"
   "CMakeFiles/CampusEventPlanner.dir/src/main.cpp.o"
   "CMakeFiles/CampusEventPlanner.dir/src/main.cpp.o.d"
+  "CMakeFiles/CampusEventPlanner.dir/src/user/userData.cpp.o"
+  "CMakeFiles/CampusEventPlanner.dir/src/user/userData.cpp.o.d"
   "CMakeFiles/CampusEventPlanner.dir/src/user_Interface/mainWindow.cpp.o"
   "CMakeFiles/CampusEventPlanner.dir/src/user_Interface/mainWindow.cpp.o.d"
   "CMakeFiles/CampusEventPlanner.dir/src/user_Interface/signUp.cpp.o"

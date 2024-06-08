@@ -3,7 +3,6 @@
 #include <imgui.h>
 #include <imgui_impl_glfw.h>
 #include <imgui_impl_opengl3.h>
-#include <iostream>
 #include <sqlite3.h>
 
 void frame_buffer_size_callback(GLFWwindow *window, int height, int width) {
@@ -60,13 +59,12 @@ int main() {
                      ImGuiWindowFlags_NoTitleBar);
 
     ImGui::Button("click");
-
     ImGui::End();
-
     ImGui::Render();
+
+    glClear(GL_COLOR_BUFFER_BIT);
     glViewport(0, 0, display_w, display_h);
     glClearColor(0.3f, 0.8f, 0.5f, 0.1f);
-    glClear(GL_COLOR_BUFFER_BIT);
     glfwSwapBuffers(window);
 
     ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());

@@ -405,6 +405,30 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CampusEventPlanner.dir/build.make CMakeFiles/CampusEventPlanner.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/user/userData.o: src/user/userData.cpp.o
+.PHONY : src/user/userData.o
+
+# target to build an object file
+src/user/userData.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CampusEventPlanner.dir/build.make CMakeFiles/CampusEventPlanner.dir/src/user/userData.cpp.o
+.PHONY : src/user/userData.cpp.o
+
+src/user/userData.i: src/user/userData.cpp.i
+.PHONY : src/user/userData.i
+
+# target to preprocess a source file
+src/user/userData.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CampusEventPlanner.dir/build.make CMakeFiles/CampusEventPlanner.dir/src/user/userData.cpp.i
+.PHONY : src/user/userData.cpp.i
+
+src/user/userData.s: src/user/userData.cpp.s
+.PHONY : src/user/userData.s
+
+# target to generate assembly for a file
+src/user/userData.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CampusEventPlanner.dir/build.make CMakeFiles/CampusEventPlanner.dir/src/user/userData.cpp.s
+.PHONY : src/user/userData.cpp.s
+
 src/user_Interface/mainWindow.o: src/user_Interface/mainWindow.cpp.o
 .PHONY : src/user_Interface/mainWindow.o
 
@@ -493,6 +517,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/user/userData.o"
+	@echo "... src/user/userData.i"
+	@echo "... src/user/userData.s"
 	@echo "... src/user_Interface/mainWindow.o"
 	@echo "... src/user_Interface/mainWindow.i"
 	@echo "... src/user_Interface/mainWindow.s"
