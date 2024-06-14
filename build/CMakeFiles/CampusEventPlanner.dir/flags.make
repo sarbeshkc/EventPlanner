@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/etoski/Personal_Project/EventPlanner/include -I/home/etoski/Personal_Project/EventPlanner/extern/imgui -I/home/etoski/Personal_Project/EventPlanner/extern/imgui/backends -I/home/etoski/Personal_Project/EventPlanner/extern/boost-asio/include -I/home/etoski/Personal_Project/EventPlanner/extern/glfw/include
+CXX_INCLUDES = -I/home/etoski/Personal_Project/EventPlanner/include -I/home/etoski/Personal_Project/EventPlanner/extern/imgui -I/home/etoski/Personal_Project/EventPlanner/extern/imgui/backends -I/home/etoski/Personal_Project/EventPlanner/extern/boost-asio/include -I/home/etoski/Libaries/stb -I/home/etoski/Personal_Project/EventPlanner/extern/glfw/include
 
-CXX_FLAGS = -std=gnu++17
+CXX_FLAGS =  -O3 -DNDEBUG -O3 -DNDEBUG -std=gnu++17
 

@@ -181,10 +181,24 @@ CMakeFiles/CampusEventPlanner.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/CampusEventPlanner.dir/src/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/etoski/Personal_Project/EventPlanner/src/main.cpp -o CMakeFiles/CampusEventPlanner.dir/src/main.cpp.s
 
+CMakeFiles/CampusEventPlanner.dir/src/object/Background.cpp.o: CMakeFiles/CampusEventPlanner.dir/flags.make
+CMakeFiles/CampusEventPlanner.dir/src/object/Background.cpp.o: /home/etoski/Personal_Project/EventPlanner/src/object/Background.cpp
+CMakeFiles/CampusEventPlanner.dir/src/object/Background.cpp.o: CMakeFiles/CampusEventPlanner.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/etoski/Personal_Project/EventPlanner/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/CampusEventPlanner.dir/src/object/Background.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CampusEventPlanner.dir/src/object/Background.cpp.o -MF CMakeFiles/CampusEventPlanner.dir/src/object/Background.cpp.o.d -o CMakeFiles/CampusEventPlanner.dir/src/object/Background.cpp.o -c /home/etoski/Personal_Project/EventPlanner/src/object/Background.cpp
+
+CMakeFiles/CampusEventPlanner.dir/src/object/Background.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/CampusEventPlanner.dir/src/object/Background.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/etoski/Personal_Project/EventPlanner/src/object/Background.cpp > CMakeFiles/CampusEventPlanner.dir/src/object/Background.cpp.i
+
+CMakeFiles/CampusEventPlanner.dir/src/object/Background.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/CampusEventPlanner.dir/src/object/Background.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/etoski/Personal_Project/EventPlanner/src/object/Background.cpp -o CMakeFiles/CampusEventPlanner.dir/src/object/Background.cpp.s
+
 CMakeFiles/CampusEventPlanner.dir/src/user/userData.cpp.o: CMakeFiles/CampusEventPlanner.dir/flags.make
 CMakeFiles/CampusEventPlanner.dir/src/user/userData.cpp.o: /home/etoski/Personal_Project/EventPlanner/src/user/userData.cpp
 CMakeFiles/CampusEventPlanner.dir/src/user/userData.cpp.o: CMakeFiles/CampusEventPlanner.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/etoski/Personal_Project/EventPlanner/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/CampusEventPlanner.dir/src/user/userData.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/etoski/Personal_Project/EventPlanner/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/CampusEventPlanner.dir/src/user/userData.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CampusEventPlanner.dir/src/user/userData.cpp.o -MF CMakeFiles/CampusEventPlanner.dir/src/user/userData.cpp.o.d -o CMakeFiles/CampusEventPlanner.dir/src/user/userData.cpp.o -c /home/etoski/Personal_Project/EventPlanner/src/user/userData.cpp
 
 CMakeFiles/CampusEventPlanner.dir/src/user/userData.cpp.i: cmake_force
@@ -198,7 +212,7 @@ CMakeFiles/CampusEventPlanner.dir/src/user/userData.cpp.s: cmake_force
 CMakeFiles/CampusEventPlanner.dir/src/user_Interface/mainWindow.cpp.o: CMakeFiles/CampusEventPlanner.dir/flags.make
 CMakeFiles/CampusEventPlanner.dir/src/user_Interface/mainWindow.cpp.o: /home/etoski/Personal_Project/EventPlanner/src/user_Interface/mainWindow.cpp
 CMakeFiles/CampusEventPlanner.dir/src/user_Interface/mainWindow.cpp.o: CMakeFiles/CampusEventPlanner.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/etoski/Personal_Project/EventPlanner/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/CampusEventPlanner.dir/src/user_Interface/mainWindow.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/etoski/Personal_Project/EventPlanner/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/CampusEventPlanner.dir/src/user_Interface/mainWindow.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CampusEventPlanner.dir/src/user_Interface/mainWindow.cpp.o -MF CMakeFiles/CampusEventPlanner.dir/src/user_Interface/mainWindow.cpp.o.d -o CMakeFiles/CampusEventPlanner.dir/src/user_Interface/mainWindow.cpp.o -c /home/etoski/Personal_Project/EventPlanner/src/user_Interface/mainWindow.cpp
 
 CMakeFiles/CampusEventPlanner.dir/src/user_Interface/mainWindow.cpp.i: cmake_force
@@ -208,20 +222,6 @@ CMakeFiles/CampusEventPlanner.dir/src/user_Interface/mainWindow.cpp.i: cmake_for
 CMakeFiles/CampusEventPlanner.dir/src/user_Interface/mainWindow.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/CampusEventPlanner.dir/src/user_Interface/mainWindow.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/etoski/Personal_Project/EventPlanner/src/user_Interface/mainWindow.cpp -o CMakeFiles/CampusEventPlanner.dir/src/user_Interface/mainWindow.cpp.s
-
-CMakeFiles/CampusEventPlanner.dir/src/user_Interface/signUp.cpp.o: CMakeFiles/CampusEventPlanner.dir/flags.make
-CMakeFiles/CampusEventPlanner.dir/src/user_Interface/signUp.cpp.o: /home/etoski/Personal_Project/EventPlanner/src/user_Interface/signUp.cpp
-CMakeFiles/CampusEventPlanner.dir/src/user_Interface/signUp.cpp.o: CMakeFiles/CampusEventPlanner.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/etoski/Personal_Project/EventPlanner/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/CampusEventPlanner.dir/src/user_Interface/signUp.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CampusEventPlanner.dir/src/user_Interface/signUp.cpp.o -MF CMakeFiles/CampusEventPlanner.dir/src/user_Interface/signUp.cpp.o.d -o CMakeFiles/CampusEventPlanner.dir/src/user_Interface/signUp.cpp.o -c /home/etoski/Personal_Project/EventPlanner/src/user_Interface/signUp.cpp
-
-CMakeFiles/CampusEventPlanner.dir/src/user_Interface/signUp.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/CampusEventPlanner.dir/src/user_Interface/signUp.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/etoski/Personal_Project/EventPlanner/src/user_Interface/signUp.cpp > CMakeFiles/CampusEventPlanner.dir/src/user_Interface/signUp.cpp.i
-
-CMakeFiles/CampusEventPlanner.dir/src/user_Interface/signUp.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/CampusEventPlanner.dir/src/user_Interface/signUp.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/etoski/Personal_Project/EventPlanner/src/user_Interface/signUp.cpp -o CMakeFiles/CampusEventPlanner.dir/src/user_Interface/signUp.cpp.s
 
 # Object files for target CampusEventPlanner
 CampusEventPlanner_OBJECTS = \
@@ -233,9 +233,9 @@ CampusEventPlanner_OBJECTS = \
 "CMakeFiles/CampusEventPlanner.dir/extern/imgui/imgui_tables.cpp.o" \
 "CMakeFiles/CampusEventPlanner.dir/extern/imgui/imgui_widgets.cpp.o" \
 "CMakeFiles/CampusEventPlanner.dir/src/main.cpp.o" \
+"CMakeFiles/CampusEventPlanner.dir/src/object/Background.cpp.o" \
 "CMakeFiles/CampusEventPlanner.dir/src/user/userData.cpp.o" \
-"CMakeFiles/CampusEventPlanner.dir/src/user_Interface/mainWindow.cpp.o" \
-"CMakeFiles/CampusEventPlanner.dir/src/user_Interface/signUp.cpp.o"
+"CMakeFiles/CampusEventPlanner.dir/src/user_Interface/mainWindow.cpp.o"
 
 # External object files for target CampusEventPlanner
 CampusEventPlanner_EXTERNAL_OBJECTS =
@@ -248,9 +248,9 @@ CampusEventPlanner: CMakeFiles/CampusEventPlanner.dir/extern/imgui/imgui_draw.cp
 CampusEventPlanner: CMakeFiles/CampusEventPlanner.dir/extern/imgui/imgui_tables.cpp.o
 CampusEventPlanner: CMakeFiles/CampusEventPlanner.dir/extern/imgui/imgui_widgets.cpp.o
 CampusEventPlanner: CMakeFiles/CampusEventPlanner.dir/src/main.cpp.o
+CampusEventPlanner: CMakeFiles/CampusEventPlanner.dir/src/object/Background.cpp.o
 CampusEventPlanner: CMakeFiles/CampusEventPlanner.dir/src/user/userData.cpp.o
 CampusEventPlanner: CMakeFiles/CampusEventPlanner.dir/src/user_Interface/mainWindow.cpp.o
-CampusEventPlanner: CMakeFiles/CampusEventPlanner.dir/src/user_Interface/signUp.cpp.o
 CampusEventPlanner: CMakeFiles/CampusEventPlanner.dir/build.make
 CampusEventPlanner: extern/glfw/src/libglfw3.a
 CampusEventPlanner: /usr/lib/x86_64-linux-gnu/librt.a

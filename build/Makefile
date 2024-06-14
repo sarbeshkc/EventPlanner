@@ -405,6 +405,30 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CampusEventPlanner.dir/build.make CMakeFiles/CampusEventPlanner.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/object/Background.o: src/object/Background.cpp.o
+.PHONY : src/object/Background.o
+
+# target to build an object file
+src/object/Background.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CampusEventPlanner.dir/build.make CMakeFiles/CampusEventPlanner.dir/src/object/Background.cpp.o
+.PHONY : src/object/Background.cpp.o
+
+src/object/Background.i: src/object/Background.cpp.i
+.PHONY : src/object/Background.i
+
+# target to preprocess a source file
+src/object/Background.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CampusEventPlanner.dir/build.make CMakeFiles/CampusEventPlanner.dir/src/object/Background.cpp.i
+.PHONY : src/object/Background.cpp.i
+
+src/object/Background.s: src/object/Background.cpp.s
+.PHONY : src/object/Background.s
+
+# target to generate assembly for a file
+src/object/Background.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CampusEventPlanner.dir/build.make CMakeFiles/CampusEventPlanner.dir/src/object/Background.cpp.s
+.PHONY : src/object/Background.cpp.s
+
 src/user/userData.o: src/user/userData.cpp.o
 .PHONY : src/user/userData.o
 
@@ -453,30 +477,6 @@ src/user_Interface/mainWindow.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CampusEventPlanner.dir/build.make CMakeFiles/CampusEventPlanner.dir/src/user_Interface/mainWindow.cpp.s
 .PHONY : src/user_Interface/mainWindow.cpp.s
 
-src/user_Interface/signUp.o: src/user_Interface/signUp.cpp.o
-.PHONY : src/user_Interface/signUp.o
-
-# target to build an object file
-src/user_Interface/signUp.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CampusEventPlanner.dir/build.make CMakeFiles/CampusEventPlanner.dir/src/user_Interface/signUp.cpp.o
-.PHONY : src/user_Interface/signUp.cpp.o
-
-src/user_Interface/signUp.i: src/user_Interface/signUp.cpp.i
-.PHONY : src/user_Interface/signUp.i
-
-# target to preprocess a source file
-src/user_Interface/signUp.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CampusEventPlanner.dir/build.make CMakeFiles/CampusEventPlanner.dir/src/user_Interface/signUp.cpp.i
-.PHONY : src/user_Interface/signUp.cpp.i
-
-src/user_Interface/signUp.s: src/user_Interface/signUp.cpp.s
-.PHONY : src/user_Interface/signUp.s
-
-# target to generate assembly for a file
-src/user_Interface/signUp.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CampusEventPlanner.dir/build.make CMakeFiles/CampusEventPlanner.dir/src/user_Interface/signUp.cpp.s
-.PHONY : src/user_Interface/signUp.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -517,15 +517,15 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/object/Background.o"
+	@echo "... src/object/Background.i"
+	@echo "... src/object/Background.s"
 	@echo "... src/user/userData.o"
 	@echo "... src/user/userData.i"
 	@echo "... src/user/userData.s"
 	@echo "... src/user_Interface/mainWindow.o"
 	@echo "... src/user_Interface/mainWindow.i"
 	@echo "... src/user_Interface/mainWindow.s"
-	@echo "... src/user_Interface/signUp.o"
-	@echo "... src/user_Interface/signUp.i"
-	@echo "... src/user_Interface/signUp.s"
 .PHONY : help
 
 

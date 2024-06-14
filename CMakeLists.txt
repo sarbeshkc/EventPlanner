@@ -4,6 +4,16 @@ project(CampusEventPlanner)
 
 set(CMAKE_CXX_STANDARD 17)
 
+# Set build type to Release if not specified
+if(NOT CMAKE_BUILD_TYPE)
+    set(CMAKE_BUILD_TYPE Release CACHE STRING "Build type" FORCE)
+endif()
+
+# Set compiler flags for Release build
+if(CMAKE_BUILD_TYPE MATCHES Release)
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O3 -DNDEBUG")
+endif()
+
 # Find OpenGL
 find_package(OpenGL REQUIRED)
 
@@ -34,6 +44,9 @@ FetchContent_MakeAvailable(sqlite3)
 set(BOOST_ASIO_DIR ${CMAKE_SOURCE_DIR}/extern/boost-asio)
 set(BOOST_ASIO_INCLUDE_DIR ${BOOST_ASIO_DIR}/include)
 
+
+ set(STB_DIR "/home/etoski/Libaries/stb/")
+
 # Add source files
 file(GLOB_RECURSE SOURCES src/*.cpp)
 file(GLOB_RECURSE SOURCES src/*.cpp ${IMGUI_SOURCES} ${IMGUI_IMPL_SOURCES})
@@ -55,4 +68,5 @@ target_include_directories(CampusEventPlanner
         ${CMAKE_SOURCE_DIR}/include
         ${IMGUI_INCLUDE_DIR}
         ${BOOST_ASIO_INCLUDE_DIR}
+        ${STB_DIR}
 )

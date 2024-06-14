@@ -6,5 +6,5 @@ C_DEFINES = -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11
 
 C_INCLUDES = -I/home/etoski/Personal_Project/EventPlanner/extern/glfw/include -I/home/etoski/Personal_Project/EventPlanner/extern/glfw/src -I/home/etoski/Personal_Project/EventPlanner/build/extern/glfw/src
 
-C_FLAGS = -std=c99 -fPIC -Wall
+C_FLAGS = -O3 -DNDEBUG -std=c99 -fPIC -Wall
 
