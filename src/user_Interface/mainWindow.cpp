@@ -19,6 +19,4 @@ void SplashPage(GLFWwindow *windowload, const char *ImageLoaction) {
   int width;
 
   glfwGetWindowSize(windowload, &height, &width);
-
-  RenderImageWindow(ImageLoaction, width, height);
 }

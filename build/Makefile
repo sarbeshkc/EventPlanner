@@ -429,6 +429,30 @@ src/object/Background.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CampusEventPlanner.dir/build.make CMakeFiles/CampusEventPlanner.dir/src/object/Background.cpp.s
 .PHONY : src/object/Background.cpp.s
 
+src/object/glad.o: src/object/glad.c.o
+.PHONY : src/object/glad.o
+
+# target to build an object file
+src/object/glad.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CampusEventPlanner.dir/build.make CMakeFiles/CampusEventPlanner.dir/src/object/glad.c.o
+.PHONY : src/object/glad.c.o
+
+src/object/glad.i: src/object/glad.c.i
+.PHONY : src/object/glad.i
+
+# target to preprocess a source file
+src/object/glad.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CampusEventPlanner.dir/build.make CMakeFiles/CampusEventPlanner.dir/src/object/glad.c.i
+.PHONY : src/object/glad.c.i
+
+src/object/glad.s: src/object/glad.c.s
+.PHONY : src/object/glad.s
+
+# target to generate assembly for a file
+src/object/glad.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CampusEventPlanner.dir/build.make CMakeFiles/CampusEventPlanner.dir/src/object/glad.c.s
+.PHONY : src/object/glad.c.s
+
 src/user/userData.o: src/user/userData.cpp.o
 .PHONY : src/user/userData.o
 
@@ -520,6 +544,9 @@ help:
 	@echo "... src/object/Background.o"
 	@echo "... src/object/Background.i"
 	@echo "... src/object/Background.s"
+	@echo "... src/object/glad.o"
+	@echo "... src/object/glad.i"
+	@echo "... src/object/glad.s"
 	@echo "... src/user/userData.o"
 	@echo "... src/user/userData.i"
 	@echo "... src/user/userData.s"

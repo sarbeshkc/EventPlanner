@@ -2,16 +2,24 @@
 #include <imgui.h>
 #include <iostream>
 
-bool RenderUILogin(User *loggedInuser) {
+bool RenderUILogin(User *loggedInuser, GLFWwindow *loginwindow) {
   static char UserBuffer[256] = {};
   static char PasswordBuffer[256] = {};
 
-  ImGui::SetNextWindowSize(ImVec2(1000, 800), ImGuiCond_FirstUseEver);
+  int height, width;
+  glfwGetWindowSize(loginwindow, &width, &height);
+  ImGui::SetNextWindowSize(ImVec2(width, height));
+  ImGui::SetNextWindowPos(ImVec2(0, 0));
+
+  //  ImGui::SetNextWindowSize(ImVec2(1000, 800), ImGuiCond_FirstUseEver);
   ImGui::Begin("Login", nullptr, ImGuiWindowFlags_NoResize);
+  ImGui::PushStyleColor(ImGuiCol_WindowBg, ImVec4(0.69f, 0.85f, 0.9f, 1.0f));
 
   ImGui::InputText("Username", UserBuffer, IM_ARRAYSIZE(UserBuffer));
   ImGui::InputText("Passeord", PasswordBuffer, IM_ARRAYSIZE(PasswordBuffer),
                    ImGuiInputTextFlags_Password);
+
+  ImGui::PopStyleColor();
 
   bool login = ImGui::Button("login");
   bool cancle = ImGui::Button("cancle");
@@ -24,13 +32,15 @@ bool RenderUILogin(User *loggedInuser) {
       loggedInuser = new User(username, password);
       std::cout << "Username : " << loggedInuser->GetUsername() << std::endl;
       std::cout << "Passeord : " << loggedInuser->GetPassword() << std::endl;
-      ImGui::CloseCurrentPopup();
+
     } else {
       ImGui::OpenPopup("Logged in error");
     }
 
     if (cancle) {
+
       ImGui::OpenPopup("Logged in Cancle");
+      std::cout << "cancle button was accessed";
       ImGui::CloseCurrentPopup();
     }
 
@@ -40,6 +50,7 @@ bool RenderUILogin(User *loggedInuser) {
       if (ImGui::Button("ok", ImVec2(120, 0))) {
         ImGui::CloseCurrentPopup();
       }
+
       ImGui::End();
     }
   }

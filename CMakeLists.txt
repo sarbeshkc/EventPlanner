@@ -47,12 +47,14 @@ set(BOOST_ASIO_INCLUDE_DIR ${BOOST_ASIO_DIR}/include)
 
  set(STB_DIR "/home/etoski/Libaries/stb/")
 
+ set (GLAD_DIR "/home/etoski/Personal_Project/EventPlanner/src/object/glad.c")
+
 # Add source files
 file(GLOB_RECURSE SOURCES src/*.cpp)
 file(GLOB_RECURSE SOURCES src/*.cpp ${IMGUI_SOURCES} ${IMGUI_IMPL_SOURCES})
 
 # Create the executable
-add_executable(CampusEventPlanner ${SOURCES} ${IMGUI_SOURCES} ${IMGUI_IMPL_SOURCES})
+add_executable(CampusEventPlanner ${SOURCES} ${IMGUI_SOURCES} ${IMGUI_IMPL_SOURCES} ${GLAD_DIR})
 
 # Link libraries
 target_link_libraries(CampusEventPlanner
@@ -70,3 +72,5 @@ target_include_directories(CampusEventPlanner
         ${BOOST_ASIO_INCLUDE_DIR}
         ${STB_DIR}
 )
+
+add_compile_options(-ggdb)

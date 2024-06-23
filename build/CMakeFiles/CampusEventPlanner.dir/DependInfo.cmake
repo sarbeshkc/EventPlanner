@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/etoski/Personal_Project/EventPlanner/src/object/glad.c" "CMakeFiles/CampusEventPlanner.dir/src/object/glad.c.o" "gcc" "CMakeFiles/CampusEventPlanner.dir/src/object/glad.c.o.d"
   "/home/etoski/Personal_Project/EventPlanner/extern/imgui/backends/imgui_impl_glfw.cpp" "CMakeFiles/CampusEventPlanner.dir/extern/imgui/backends/imgui_impl_glfw.cpp.o" "gcc" "CMakeFiles/CampusEventPlanner.dir/extern/imgui/backends/imgui_impl_glfw.cpp.o.d"
   "/home/etoski/Personal_Project/EventPlanner/extern/imgui/backends/imgui_impl_opengl3.cpp" "CMakeFiles/CampusEventPlanner.dir/extern/imgui/backends/imgui_impl_opengl3.cpp.o" "gcc" "CMakeFiles/CampusEventPlanner.dir/extern/imgui/backends/imgui_impl_opengl3.cpp.o.d"
   "/home/etoski/Personal_Project/EventPlanner/extern/imgui/imgui.cpp" "CMakeFiles/CampusEventPlanner.dir/extern/imgui/imgui.cpp.o" "gcc" "CMakeFiles/CampusEventPlanner.dir/extern/imgui/imgui.cpp.o.d"

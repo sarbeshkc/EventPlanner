@@ -1,10 +1,12 @@
+#include "../src/object/Background.h"
 #include "../src/user/userlogin.h"
-#include "../src/user_Interface/mainWindow.h"
-#include <GL/gl.h>
+#include "glad.h"
 #include <GLFW/glfw3.h>
 #include <imgui.h>
 #include <imgui_impl_glfw.h>
 #include <imgui_impl_opengl3.h>
+#include <map>
+#include <string>
 
 void frame_buffer_size_callback(GLFWwindow *window, int height, int width) {
   glViewport(0, 0, width, height);
@@ -46,15 +48,23 @@ int main() {
   // Setting up imgui window
   ImGui::StyleColorsDark();
 
+  int32_t wndWidth{896};
+  int32_t wndHeight{504};
+
   // Showing Window Logic
 
   bool showLoginWindow = false;
   bool button_pressed = false;
   bool isRendered = false;
+  bool loginButton = false;
+
+  std::map<std::string, Texture> textures;
   /*
     ImGui_ImplOpenGL3_NewFrame();
     ImGui_ImplGlfw_NewFrame();
     ImGui::NewFrame(); */
+
+  // Crerating a window everytime
 
   while (!glfwWindowShouldClose(window)) {
 
@@ -71,14 +81,32 @@ int main() {
     ImGui::SetNextWindowSize(
 
         ImVec2(static_cast<float>(display_w), static_cast<float>(display_h)));
+
+    User *GettingUser;
+    RenderUILogin(GettingUser, window);
+
     /*
     ImGui::Begin("EventPlanner", nullptr,
                  ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoMove |
                      ImGuiWindowFlags_NoTitleBar);  */
+    /*
+        if (ImGui::Button("Click for login")) {
+          loginButton = true;
+        }
+
+        if (loginButton == true) {
+          User *ExistingUser;
+          RenderUILogin(ExistingUser, window);
+        }
+    */
+    /*
+    if (ImGui::Button("SignUP")) {
+    }
     User *FirstUser;
-    RenderUILogin(FirstUser);
+    RenderUILogin(FirstUser, window);  */
     //  RenderImageWindow("../images/Demo.jpeg", 2000, 800);
 
+    /*
     if (ImGui::Button("Load Splash Page")) {
       button_pressed = true;
     }
@@ -86,14 +114,33 @@ int main() {
       SplashPage(window, "../images/Demo.jpeg");
       SplashPage(window, "../images/cwajkd.jpg");
     }
+    */
 
-    ImGui::End();
+    if (ImGui::Button("LoadTexture")) {
+      // alias can be anything
+      Texture &testTexture = textures["image_alias"];
+
+      if (testTexture.loadFromFile(
+              "/home/etoski/Documents/4af65be5c257b1d403eeb036cadab979.png") !=
+          Texture::Sucess) {
+        std::cout << "Failed to load the texture!\n";
+      }
+
+      if (textures["second_image"].loadFromFile("../images/cwajkd.jpg") !=
+          Texture::Sucess) {
+        std::cout << "Failed to load the texture!\n";
+      }
+    }
+
+    RenderSplashImage("image_alias", textures);
+    RenderSplashImage("second_image", textures);
+
     ImGui::Render();
     glViewport(0, 0, display_w, display_h);
     ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
     glfwSwapBuffers(window);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-    glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+    glClearColor(0.69f, 0.85f, 0.9f, 1.0f);
   }
 
   glfwDestroyWindow(window);

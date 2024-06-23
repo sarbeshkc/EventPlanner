@@ -1,10 +1,13 @@
 #ifndef DEBUG
 
+#include "../glad.h"
 #include "imgui.h"
 #include <iostream>
 #include <ostream>
 #include <sqlite3.h>
 #include <string>
+
+#include <GLFW/glfw3.h>
 
 class User {
 private:
@@ -19,6 +22,6 @@ public:
   const std::string &GetPassword() const { return m_password; }
 };
 
-bool RenderUILogin(User *loggedInuser);
+bool RenderUILogin(User *loggedInuser, GLFWwindow *loginuser);
 
 #endif // !DEBUG
