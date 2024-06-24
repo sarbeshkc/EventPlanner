@@ -6,6 +6,8 @@ bool RenderUILogin(User *loggedInuser, GLFWwindow *loginwindow) {
   static char UserBuffer[256] = {};
   static char PasswordBuffer[256] = {};
 
+  // This is a comment
+
   int height, width;
   glfwGetWindowSize(loginwindow, &width, &height);
   ImGui::SetNextWindowSize(ImVec2(width, height));
